@@ -1,16 +1,17 @@
-#Assignment (loop)
-#Fahrenheit Celsius
+# university = r"Inha\nUniversity!" #raw string
+# print(university)
+#
+# university = "Inha\nUniversity!"
+# print(university)
+# number1 = input("First number : ")
+# number2 = input("Second number : ")
+# print(number1 + number2) #concatenation
+# print(number1 * 3) #duplicate
+# print(number1 + 3) #type eroror
 
-while True:
-    menu = input("1) Fahrenheit -> Celsius   2) Celsius -> Fahrenheit   3) Quit program : ")
-
-    if menu == '1':
-        fahrenheit = float(input('Input Fahrenheit : '))
-        print(f'Fahrenheit : {fahrenheit}F, Celsius : {((fahrenheit-32.0)*5.0/9.0):.4f}C')
-    elif menu == '2':
-        celsius = float(input('Input Celsius : '))
-        print(f'Celsius : {celsius}C, Fahrenheit : {((celsius*9.0/5.0)+32.0):.4f}F')
-    elif menu == '3':
-        print("Program terminated.")
-        break
-
+# slicing
+# print(university[:4])
+# print(university[:-11])
+# print(university[0:len(university)]) #len함수는 글자의 개수 16을 의미한다.
+# print(university[:16])
+# print(university[::2]) #::2는 두 칸씩
