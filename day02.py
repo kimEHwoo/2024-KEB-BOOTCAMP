@@ -1,10 +1,7 @@
-letter = input('Input a letter : ')
-
-#vowels = {'a', 'e', 'i', 'o', 'u'} #set
-vowels = "aeiou" #str
-
-print(type(vowels))
-if letter in vowels:
-    print(f'{letter} is a vowel~')
+tweet_limit = 280
+tweet_string = "Blah" * 50
+if (diff := tweet_limit - len(tweet_string)) >= 0:
+    print("A fitting tweet")
 else:
-    print(f'{letter} is a consonant!')
+    print("Went over by", abs(diff))
+# Went over by 220
