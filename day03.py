@@ -1,4 +1,5 @@
 #Assignment (loop)
+#Fahrenheit Celsius
 
 while True:
     menu = input("1) Fahrenheit -> Celsius   2) Celsius -> Fahrenheit   3) Quit program : ")
