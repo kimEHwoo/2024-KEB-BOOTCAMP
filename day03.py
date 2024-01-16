@@ -1,13 +1,21 @@
-#numbers = input("FirstNumber SecondNumber : ").split() #["9", "7"]
-#print(numbers[0]+numbers[1]) #concatenation
-#print(int(numbers[0]) + int(numbers[1])) #arithetic operation
-#print(9+7)
+course = "2024 KEB Bootcamp"
+print(course)
+print(course.replace('KEB', 'Inha'))
+print(course)
+course = course.replace('KEB', 'Inha')
+print(course)
 
-# course = "2024 KEB Bootcamp"
-# print(course)
-# list_course = course.split('B')
-# print(list_course)
+course = "KEB 2024 KEB Bootcamp"
+print(course)
+course = course.replace('KEB', 'Inha', 1)
+print(course)
 
-subjects = ["python", "c++", "database"]
-subjects_string = "/".join(subjects)
-print(subjects_string)
+course = "* KEB 2024# KEB !Bootcamp KEB...*!#"
+print(course.strip())
+print(course.strip("!#.*"))
+print(course.find('KEB')) #2
+print(course.rfind('KEB')) #26
+print(course.index('KEB')) #2
+print(course.rindex('KEB')) #26
+print(course.find('Inha')) #-1
+print(course.index('Inha'))
