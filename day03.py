@@ -1,16 +1,16 @@
 #prime number
-number = int(input("Input number : "))
-is_prime = True
+numbers = (input("Input first second number : ")).split() #int형 하면 만약 21 10 넣었을 때 이게 정수형이 아니어서 안된다.
+n1 = int(numbers[0])
+n2 = int(numbers[1])
 
-if number < 2 :
-    print(f'{number} is NOT a prime number')
-else :
-    for i in range(2, number) :
-        if (number % i) == 0:
-            is_prime = False
-            break
+for number in range(n1, n2+1):
+    is_prime = True
 
-    if is_prime:
-        print(f'{number} is prime number')
-    else:
-        print(f'{number} is NOT prime number')
+    if number < 2 :
+        pass
+    else :
+        for i in range(2, number) :
+            if (number % i) == 0:
+                is_prime = False
+                break
+        if is_prime: print(number, end=' ')
