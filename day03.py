@@ -1,21 +1,6 @@
-course = "2024 KEB Bootcamp"
-print(course)
-print(course.replace('KEB', 'Inha'))
-print(course)
-course = course.replace('KEB', 'Inha')
-print(course)
-
-course = "KEB 2024 KEB Bootcamp"
-print(course)
-course = course.replace('KEB', 'Inha', 1)
-print(course)
-
-course = "* KEB 2024# KEB !Bootcamp KEB...*!#"
-print(course.strip())
-print(course.strip("!#.*"))
-print(course.find('KEB')) #2
-print(course.rfind('KEB')) #26
-print(course.index('KEB')) #2
-print(course.rindex('KEB')) #26
-print(course.find('Inha')) #-1
-print(course.index('Inha'))
+subjects = "python c++ database linux"
+subject = input("수강신청과목 입력: ")
+if subjects.find('subject') != -1: #subjects.find('c++')은 7이다.
+    print(f"해당 과목이 존재합니다. 위치는 {subjects.find('subject')}번 인덱스입니다.")
+else:
+    print('해당과목이 존재하지 않습니다.')
