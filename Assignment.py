@@ -12,7 +12,7 @@ numbers = (input("Input first second number : ")).split()
                 pass
             else:
                 i = 2
-                while i * i < number:   # performance issue
+                while i * i <= number:   # performance issue
                     if number % i ==0:
                         is_prime = False
                         break
