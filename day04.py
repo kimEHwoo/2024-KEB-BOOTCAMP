@@ -16,8 +16,8 @@ t7 = ()
 t8 = tuple()
 print(type(t7), type(t8), type(9,), type((9,)))
 t9 = 1, 2, 3
-t10 = 1, 2
-print(t9 == t10)
+t10 = 1, 21
+print(t9 == t10) #비교연산은 개수가 아니라 각 순서에 해당하는 값의 비교이다.
 print(t9 <= t10)
 print(t9 > t10)
 t11 = 4.43,
