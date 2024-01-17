@@ -14,6 +14,7 @@ while True:
     elif menu == '3':
         number = int(input("Input number : "))
         is_prime = True
+
         if number < 2:
             print(f'{number} is NOT prime number!')
         else:
@@ -54,3 +55,10 @@ while True:
 
     else:
         print('Invalid menu')
+
+#4번에서 숫자 2개 안 받으면 오류남
+#가독성
+#간결성
+#problem: 중복 코드 -> 함수로 해결할 수 있다.
+#3번에서 큰 수를 판단할 때 시간이 많이 들어간다.
+#검증된 라이브러리에서
