@@ -6,24 +6,39 @@ def isprime(n) -> bool:
     :param n: 판정할 매개변수
     :return: 소수면 True, 소수가 아니면 False
     """
-    if n < 2:
-        return False
-    else:
-        i = 2
-        while i*i <= n:
-            if n % i == 0:
-                return False
-            i+=1
-        return True
+    # Assignment (add prime series program)
+    while True:
+        menu = input("1) Fahrenheit -> Celsius   2) Celsius -> Fahrenheit   3) Prime1   4) Prime2   5) Quit program : ")
 
-help(isprime)
-numbers = input("Input first second number : ").split()
-n1 = int(numbers[0])
-n2 = int(numbers[1])
+        if menu == '1':
+            fahrenheit = float(input('Input Fahrenheit : '))
+            print(f'Fahrenheit : {fahrenheit}F, Celsius : {((fahrenheit - 32.0) * 5.0 / 9.0):.4f}C')
+        elif menu == '2':
+            celsius = float(input('Input Celsius : '))
+            print(f'Celsius : {celsius}C, Fahrenheit : {((celsius * 9.0 / 5.0) + 32.0):.4f}F')
+        elif menu == '3':
+            number = int(input("Input number : "))
+            is_prime = True
 
-if n1 > n2:
-    n1, n2 = n2, n1
+            if number < 2:
+                print(f'{number} is NOT prime number!')
+            else:
+                for i in range(2, number):
+                    if number % i == 0:
+                        is_prime = False
+                        break
 
-for number in range(n1, n2+1):
-    if isprime(number):
-        print(number, end=' ')
+                if is_prime:
+                    print(f'{number} is prime number')
+                else:
+                    print(f'{number} is NOT prime number!')
+        elif menu == '4':
+            for number in range(n1, n2 + 1):
+                if isprime(number):
+                print(number, end=' ')
+            print()
+        elif menu == '5':
+            print('Terminate Program.')
+            break
+        else:
+            print('Invalid Menu!')
