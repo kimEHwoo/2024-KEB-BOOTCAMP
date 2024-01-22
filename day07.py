@@ -1,14 +1,33 @@
-class FlyingMixin:
+class FlyingBehavior:
     def fly(self):
-        return f"{self.__name}이(가) 하늘을 훨훨 날아갑니다~"
+        return f"하늘을 훨훨 날아갑니다~"
 
-class SwimmingMixin:
+
+class JetPack(FlyingBehavior):
+    def fly(self):
+        return f"로켓추진기로 하늘을 날아갑니다!"
+
+
+class NoFly(FlyingBehavior):
+    def fly(self):
+        return f"하늘을 날 수 없습니다."
+
+
+class FlyWithWings(FlyingBehavior):
+    def fly(self):
+        return f"날개로 하늘을 훨훨 날아갑니다"
+
+
+class SwimmingBehavior:
     def swim(self):
         return f"{self.__name}이(가) 수영을 합니다."
 
 class Pokemon:
-    def __init__(self, name):
+    def __init__(self, name, hp, fly):
         self.__name = name
+        self.hp = hp
+        self.fly_behavior = fly  # aggregation (has-a)
+
 
     def attack(self):
         print("공격~")
@@ -26,17 +45,23 @@ class Pokemon:
         return self.__name + " 입니다"
 
     def __add__(self, target):
-        return self.__name + " + " + target.__name
+        #return self.__name + " + " + target.__name
+        return f"두 포켓몬스터 체력의 합은 {self.hp + target.hp}입니다."
 
 
-class Charizard(Pokemon, FlyingMixin):
+class Charizard(Pokemon):
     pass
 
-class Gyarados(Pokemon, SwimmingMixin):
+class Pikachu(Pokemon):
     pass
 
-g1 = Gyarados("갸라도스")
-c1 = Charizard("리자몽")
+nofly = NoFly()
+g1 = Pikachu("피카츄", 35, nofly)  # LSP
+wings = FlyWithWings()
+c1 = Charizard("리자몽", 120, wings)  # LSP
+print(c1.fly_behavior.fly())
+print(g1.fly_behavior.fly())
 print(g1)
 print(c1)
 print(g1+c1)
+#print(g1+200)
